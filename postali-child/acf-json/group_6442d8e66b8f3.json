@@ -1,0 +1,45 @@
+{
+    "key": "group_6442d8e66b8f3",
+    "title": "Interior",
+    "fields": [
+        {
+            "key": "field_6442d8e6a4943",
+            "label": "Intro Section",
+            "name": "intro_section",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Top section, above text \/ call links.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "text",
+            "media_upload": 1,
+            "toolbar": "full",
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-interior.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1682102588
+}

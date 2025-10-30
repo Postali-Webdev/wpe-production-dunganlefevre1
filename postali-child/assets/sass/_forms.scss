@@ -1,0 +1,106 @@
+.gfield_required {
+    color:$white;
+}
+
+@include respond(tab-land) {
+    width:100%;
+    max-width: 100%;
+}
+
+.gform_required_legend {
+    color: white;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#field_1_9 {
+    legend {
+        font-weight: normal !important;
+        line-height: 125%;
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+        padding-top: 10px !important;
+        display: block !important;
+
+        &::before {
+            display: none;
+        }
+    }
+}
+
+.gchoice_1_9_1 {
+    margin: 15px 0;
+}
+
+#label_1_9_1 {
+    color: white;
+}
+
+#gform_fields_1 {                                
+    .gfield_label {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        margin-bottom: 8px;
+        padding: 0;
+        color: $white;
+        font-weight: bold;
+        font-family: $sans;
+
+        &::before {
+            position: relative;
+            content:"•";
+            margin-right: 10px;
+            font-size: 21px;
+            color:#368F8B;
+            line-height: 0;
+        }
+    }
+
+    .ginput_container {
+        input,
+        textarea {
+            border: none;
+            background: #368F8B;
+            padding:12px;
+            color:$white;
+        }
+    }
+
+    .gfield_required {
+        color:$white;
+    }
+}
+
+input[type="submit"] {
+    display: inline-flex;
+    padding: 15px 70px 15px 40px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s linear;
+    background-color: $dkblue;
+    color: $white;
+    font-family: $sans;
+    font-size: 16px;
+    font-weight: bold;
+    border:none;
+    transition: $trans;
+    background-image: url(/wp-content/uploads/2023/04/right-arrow-white.svg);
+    background-size: 33px;
+    background-repeat: no-repeat;
+    background-position: center right 25px;
+    background-attachment: initial;
+    cursor: pointer;
+
+    &:hover {
+        background:$white;
+        color:$dkblue;
+        background-image: url(/wp-content/uploads/2023/04/right-arrow.svg);
+        background-size: 33px;
+        background-repeat: no-repeat;
+        background-position: center right 25px;
+        background-attachment: initial;
+    }
+}

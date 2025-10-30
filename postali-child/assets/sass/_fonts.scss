@@ -1,0 +1,155 @@
+/**
+ * Web Font Styles, H Styles, Body Text Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+
+/* Fonts */
+body, h1, h2, h3, h4, h5, h6, p, a, ul {
+    // color: $body-text-color;
+} 
+p, a, ul, ol {
+
+}
+ul li, ol li {
+    margin: 0 0 0 20px;
+    font-size: 18px;
+}
+dl, blockquote, img {
+
+}
+
+a {
+    text-decoration:none;
+    transition:$trans;
+    &:hover {
+        // color:$lt-red;
+        text-decoration:none;
+    }
+}
+
+.btn {
+    display:inline-flex;
+    padding:15px 40px;
+    font-size: 16px;
+    text-decoration:none;
+    transition:$trans;
+    background-color: $teal;
+    color:$white;
+    font-family: $sans;
+    font-size: 16px;
+    font-weight: bold;
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: $white;
+            color:$dkblue;
+        }
+    }
+}
+
+h1, h2, h3, h4, p, ul li, ul li a {
+    transition: $trans;
+}
+
+h1, 
+h2, 
+h3, 
+h4 {
+    a {
+        color: inherit;
+        font-family: inherit;
+    }
+} 
+
+.reversed {
+    h1, h2, h3, h4, p, ul li, ul li a {
+        color:$white;
+    }
+}
+
+p {
+    font-size:16px;
+    line-height: 200%;
+    margin-bottom:30px !important;
+    font-family: $sans;
+
+    &.xsmall {
+        font-size: 12px;
+    }
+
+    &#breadcrumbs {
+        color:$white;
+        font-size: 10px;
+        font-weight: 400 !important;
+        
+        @include respond(tab-port) {
+            padding-left: 30px;
+        }
+
+        a {
+            color:inherit;
+            font-size: inherit;
+        }
+    }
+
+    a {
+        color:inherit;
+        font-family: inherit;
+        text-decoration: underline;
+
+        &:hover {
+            color:$teal;
+        }
+    }
+}
+
+h1 {
+    font-family: $sans;
+    font-size: 100px;
+    line-height: 110%;
+    text-transform: none;
+    color: $dkblue;
+
+    @include respond(tab-port) {
+        font-size: 65px;
+    }
+
+    @include respond(phone) {
+        font-size: 50px;
+    }
+}
+
+h2 {
+    font-family: $sans;
+    font-size: 60px;
+    color:$dkblue;
+    margin-bottom: 20px !important;
+
+    @include respond(desktop) {
+        font-size: 45px;
+    }
+
+    @include respond(tab-port) {
+        font-size: 35px;
+    }
+}
+
+h3 {
+    font-family: $serif;
+    font-size: 40px;
+    color:$dkblue;
+    font-weight: normal !important;
+    margin-bottom: 20px !important;
+
+    @include respond(tab-port) {
+        font-size: 30px;
+    }
+}
+
+h4 {
+    font-family: $sans;
+    font-size: 28px;
+    color:$dkblue;
+}
