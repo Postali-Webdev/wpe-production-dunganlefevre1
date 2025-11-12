@@ -40,6 +40,7 @@
                 </div>
                 <div class="column-25 block border-top links">
                 <h4>Site Links</h4>
+                    <nav>
                     <?php
                         $args = array(
                             'container' => false,
@@ -47,6 +48,7 @@
                         );
                         wp_nav_menu( $args );
                     ?>	
+                    </nav>
                 </div>
                 <div class="column-50 border-top">
                     <div class="offices">
@@ -78,6 +80,7 @@
                     <p class="xsmall"><?php the_field('footer_disclaimer','options'); ?></p>
                     <div class="spacer-30"></div>
                     <div class="footer-utility">
+                        <nav>
                         <?php
 							$args = array(
 								'container' => false,
@@ -85,6 +88,7 @@
 							);
 							wp_nav_menu( $args );
 						?>	
+                        </nav>
                         <p class="copyright-year">Copyright &copy; <?php echo date('Y'); ?> Dungan & LeFevre. All rights reserved.</p>
                         <?php if(is_page_template('front-page.php')) { ?>
                         <div class="spacer-15"></div>
