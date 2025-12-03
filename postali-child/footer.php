@@ -103,6 +103,12 @@
 </footer>
 
 <?php wp_footer(); ?>
+
+
+<!-- callrail -->
+ <script type="text/javascript" src="//cdn.callrail.com/companies/815122423/6af0a29d5ad72308194c/12/swap.js"></script>  
+<!-- /callrail -->
+
 </body>
 </html>
 
