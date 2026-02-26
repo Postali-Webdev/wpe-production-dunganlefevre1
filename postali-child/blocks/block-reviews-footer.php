@@ -6,7 +6,7 @@
                     <p class="reviews-quote"><?php the_field('hp_reviews_quote'); ?></p>
                     <div class="spacer-30"></div>
                     <div class="reviews-rating">
-                        <img src="/wp-content/uploads/2023/05/Google_reviews_reversed.svg"><p>4.9 Rating out of 242 Reviews</p>
+                        <img src="/wp-content/uploads/2023/05/Google_reviews_reversed.svg"><p>4.9 Rating out of 266 Reviews</p>
                     </div>
                     <a href="/testimonials/" class="btn">See All Reviews</a>
                     <div class="spacer-90"></div>
