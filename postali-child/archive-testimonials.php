@@ -26,7 +26,7 @@ get_header(); ?>
             <div class="columns">
                 <div class="column-full padded">
                     <div class="reviews-count">
-                        <img src="/wp-content/uploads/2023/04/Google_reviews_DF.svg" alt="Google Reviews logo"><p>4.8 Rating out of 174 Reviews</p>
+                        <img src="/wp-content/uploads/2023/04/Google_reviews_DF.svg" alt="Google Reviews logo"><p>4.9 Rating out of 266 Reviews</p>
                     </div>
                     <div class="testimonial-holder">
                     <?php
