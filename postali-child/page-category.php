@@ -53,6 +53,36 @@ get_header(); ?>
         </div>
     </section>
 
+
+    <?php if(is_tree(117)) { ?>
+
+    <section class="cta-block">
+        <div class="container">
+            <div class="columns">
+                <div class="column-66 dots reversed">
+                    <div class="column-content">
+                        <p class="block-title"><?php the_field('block_title','options'); ?></p>
+                        <div class="spacer-30"></div>
+                        <?php if (get_field('block_headline','options')) { ?>
+                        <h2><?php the_field('block_headline','options'); ?></h2>
+                        <?php } ?>
+                        <?php if (get_field('block_copy','options')) { ?>
+                        <p class="block-copy"><?php the_field('block_copy','options'); ?></p>
+                        <?php echo do_shortcode(get_field('download_form_embed','options')); ?>
+                        <p class="xsmall"><em><?php the_field('download_form_disclaimer','options'); ?></em></p>
+                        <?php } ?>
+                    </div>
+                </div>
+                <div class="column-33 photo" style="background-image:url('<?php the_field('block_image','options'); ?>');">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <?php } ?>
+
+
     <?php if(get_field('separator_background')) { ?>
     <section class="separator" style="background-image:url(<?php the_field('separator_background'); ?>"></section>
     <?php } else { ?>

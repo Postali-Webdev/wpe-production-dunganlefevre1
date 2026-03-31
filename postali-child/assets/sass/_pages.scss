@@ -874,6 +874,64 @@
     }
 
     @include reviews-footer;
+
+    @include cta-block;
+
+    .cta-block {
+        .columns {
+            .column-66 {
+                &.dots {
+                    padding: 5% 7% 3%;
+
+                    p.xsmall {
+                        line-height: 150%;
+                    }
+
+                    #gform_4 {
+                        display: grid;
+                        grid-template-columns: 1fr 200px;
+                        align-items: center;
+                        width: 100%;
+                        padding: 0;
+                        margin: 0 0 20px;
+
+                        @include respond(phone) {
+                            grid-template-columns: 1fr 70px;
+                        }
+
+                        #input_4_1 {
+                            height: 50px;
+                            border-radius: 0;
+                            border: none;
+                        }
+
+                        #gform_submit_button_4 {
+                            margin: 0;
+                            height: 50px;
+                            background-image: none;
+                            padding: 0 25px;
+
+                            @include respond(phone) {
+                                background-image: url(/wp-content/uploads/2023/04/right-arrow-white.svg);
+                                padding: 0;
+                                width: 70px;
+                                font-size: 0;
+                            }
+
+                            &:hover {
+                                background-color: #EFEFEF;
+                            }
+                        }
+
+                        .gform_footer {
+                            margin: 0;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 .post-type-archive-staff {
