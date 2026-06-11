@@ -249,88 +249,15 @@
             }
         }
     }
-}
+} 
 
 .blog,
-.category {
-    .filter-sort {
-        align-items: normal;
-        margin-bottom: 150px;
-        flex-wrap: wrap;
-
-        .column-75 {
-            @include respond(tab-land) {
-                width:100%;
-            }
-        }
-
-        .column-25 {
-            justify-content: flex-end;
-
-            @include respond(tab-land) {
-                width:100%;
-                justify-content: flex-start;
-            }
-
-            .accordions {
-                position: absolute;
-                z-index: 1;
-                top:40px;
-
-                @include respond(tab-land) {
-                    max-width: 400px;
-                }
-
-                .accordions_title {
-                    color: $white;
-                    margin: 0;
-                    
-                    span {
-                        &::after {
-                            display: none;
-                        }
-
-                        &.icon-filter-icon {
-                            font-size: 27px;
-                            margin: 0 0 0 auto;
-                        }
-                    }
-                }
-
-                .accordions_content {
-                    max-height: 400px;
-                    overflow-y: scroll;
-
-                    &::after {
-                        display: block;
-                        position: absolute;
-                        bottom: -33px;
-                        height: 34px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        background: $dkblue;
-                        content: "scroll for all categories";
-                        color: $white;
-                        width: 100%;
-                        font-size: 12px;
-                        text-transform: uppercase;
-                        letter-spacing: 1px;
-                    }
-
-                    ul {
-                        li {
-                            a {
-                                &::after {
-                                    display: none;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+.category,
+.post-type-archive-resources,
+.tax-resource_topic {
+    @include filter-sort;
+    @include dot-line;
+    @include date-category;
 
     .blog-posts {
         justify-content: space-between;
@@ -339,8 +266,20 @@
             align-items: flex-start;
             
             @include border-hover;
-
             @include date-category;
+        }
+    }
+
+    .resource-block {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+            justify-content: space-between;
+        
+        button {
+            @include respond(tab-port) {
+                margin-bottom: 40px;
+            }
         }
     }
 
@@ -349,6 +288,138 @@
     footer {
         &::before {
             display:none;
+        }
+    }
+
+    .modal-window {
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        display: none;
+
+        &.open {
+            display: block;
+        }
+        
+        .inner {
+            position: absolute;
+            height: auto;
+            width: 600px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: $teal;
+            z-index: 5;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.3);
+            padding: 50px 50px 20px;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            @include respond(tab-port) {
+                width: 90%;
+            }
+
+            .close-window {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                span.icon-close-icon::before {
+                    font-size: 25px;
+                }
+            }
+            
+            * {
+                color:$white;
+            }
+
+            h2 {
+                text-align: center;
+                margin:0 !important;
+                font-size: 44px;
+                line-height: 110%;
+            }
+
+            .gform_wrapper {
+                margin-top: -10px;
+                
+                .gfield-choice-input+label {
+                    margin-bottom: 0;
+                    max-width: calc(100% - 40px);
+                    vertical-align: top;
+                    font-size: 11px;
+                    color: $white;
+                    line-height: 145%;
+                }
+
+                .gform_footer {
+                    position: relative;
+                    width: -webkit-fit-content;
+                    width: -moz-fit-content;
+                    width: fit-content;
+                    margin: 20px auto 0;
+                    
+                    &::after {
+                        content: "\e904";
+                        font-family: $icomoon;
+                        left: 170px;
+                        top: 25px;
+                        position: absolute;
+                        color: $teal;
+                        transition: 0.3s linear;
+                        font-size: 32px;
+                        font-weight: lighter;
+                        pointer-events: none;
+                    }
+                }
+
+                .gfield_required {
+                    color: $white;
+                }
+
+                .gform_required_legend {
+                    text-align: center;
+                }
+
+                input[type="email"] {
+                    width: 100%;
+                    background: rgba($white, .2);
+                    border: none;
+                    color: white;
+                    height: 40px;
+                }
+
+                input[type="submit"] {
+                    background-color: $white;
+                    color: $dkblue;
+                    cursor: pointer;
+                    background-image: none;
+                    position: relative;
+                    margin: 0 auto;
+                }
+            }
+
+            #gform_confirmation_message_5 {
+                text-align: center;
+            }
+
+            #modal-close {
+                margin: 0 auto 40px;
+            }
         }
     }
 }

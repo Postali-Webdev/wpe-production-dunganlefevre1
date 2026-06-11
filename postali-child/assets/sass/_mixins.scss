@@ -1178,3 +1178,89 @@
         }
     }
 }
+
+@mixin filter-sort {
+    .filter-sort {
+        align-items: normal;
+        margin-bottom: 150px;
+        flex-wrap: wrap;
+
+        .column-75 {
+            @include respond(tab-land) {
+                width:100%;
+            }
+        }
+
+        .column-25 {
+            justify-content: flex-end;
+
+            @include respond(tab-land) {
+                width:100%;
+                justify-content: flex-start;
+            }
+
+            .accordions {
+                position: absolute;
+                z-index: 1;
+                top:40px;
+
+                @include respond(tab-land) {
+                    max-width: 400px;
+                }
+
+                .accordions_title {
+                    color: $white;
+                    margin: 0;
+                    
+                    span {
+                        &::after {
+                            display: none;
+                        }
+
+                        &.icon-filter-icon {
+                            font-size: 27px;
+                            margin: 0 0 0 auto;
+                        }
+                    }
+                }
+
+                .accordions_content {
+                    max-height: 400px;
+                    overflow-y: scroll;
+                    background:$ltgrey;
+                    padding:0 10px 10px;
+                    box-sizing: border-box;
+                    border:1px solid $mdgrey;
+
+                    &::after {
+                        display: block;
+                        position: absolute;
+                        bottom: -33px;
+                        height: 34px;
+                        display: flex;
+                        left: 0;
+                        justify-content: center;
+                        align-items: center;
+                        background: $dkblue;
+                        content: "scroll for all categories";
+                        color: $white;
+                        width: 100%;
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                    }
+
+                    ul {
+                        li {
+                            a {
+                                &::after {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

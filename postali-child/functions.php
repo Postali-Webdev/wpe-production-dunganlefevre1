@@ -7,6 +7,7 @@
  */
 	require_once dirname( __FILE__ ) . '/includes/admin.php';
 	require_once dirname( __FILE__ ) . '/includes/utility.php';
+    require_once dirname( __FILE__ ) . '/includes/resources-cpt.php'; // Custom Post Type Case Results
 	require_once dirname( __FILE__ ) . '/includes/case-results-cpt.php'; // Custom Post Type Case Results
 	require_once dirname( __FILE__ ) . '/includes/testimonials-cpt.php'; // Custom Post Type Testimonials
 	require_once dirname( __FILE__ ) . '/includes/staff-cpt.php'; // Custom Post Type Attorneys
@@ -462,5 +463,7 @@ function postali_remove_customizer_additional_css_section( $wp_customize ) {
     }
 }
 add_action( 'customize_register', 'postali_remove_customizer_additional_css_section', 20 );
+
+add_filter( 'gform_confirmation_anchor_5', '__return_false' );
 
 ?>

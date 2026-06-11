@@ -47,6 +47,16 @@ a {
             color:$dkblue;
         }
     }
+
+    &.white {
+        background-color: $white !important;
+        color:$dkblue !important;
+
+        &:hover {
+            background-color: $dkblue !important;
+            color:$white !important;
+        }
+    }
 }
 
 h1, h2, h3, h4, p, ul li, ul li a {
