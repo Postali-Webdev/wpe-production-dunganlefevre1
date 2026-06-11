@@ -238,7 +238,8 @@
         .columns {
             align-items: normal;
 
-            .column-66 {
+            .column-66,
+            .column-75 {
                 width:64%;
 
                 @include respond(tab-port) {
@@ -352,6 +353,16 @@
                         background-position: bottom left;
                         background-repeat: no-repeat;
                     }
+                }
+            }
+
+            .column-75 {
+                width:74%;
+                padding: 5% 7% 6% !important;
+
+                @include respond(tab-port) {
+                    width:100%;
+                    padding: 50px 7% !important;
                 }
             }
     

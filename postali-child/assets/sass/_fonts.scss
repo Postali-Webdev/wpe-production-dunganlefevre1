@@ -57,6 +57,20 @@ a {
             color:$white !important;
         }
     }
+
+    &.arrowed {
+        padding: 15px 20px 15px 40px;
+        
+        &::after {
+            content: "\e904";
+            font-family: "Icomoon";
+            color: $teal;
+            margin-left: 10px;
+            font-size: 25px;
+            font-weight: 100;
+            transition: 0.3s linear;
+        }
+    }
 }
 
 h1, h2, h3, h4, p, ul li, ul li a {

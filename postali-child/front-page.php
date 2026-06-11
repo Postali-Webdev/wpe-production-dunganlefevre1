@@ -135,6 +135,25 @@ get_header();?>
 
     <?php get_template_part('blocks/block','awards'); ?>
 
+    <section class="cta-block">
+        <div class="container">
+            <div class="columns">
+                <div class="column-75 dots reversed centered center">
+                    <div class="column-content">
+                        <?php if (get_field('hp_resources_title')) { ?>
+                        <p class="block-title"><?php the_field('hp_resources_title'); ?></p>
+                        <?php } ?>
+                        <div class="spacer-30"></div>
+                        <h2><?php the_field('hp_resources_h2'); ?></h2>
+                        <div class="spacer-30"></div>
+                        
+                        <a href="/resources/" class="btn white arrowed">All Resources</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <?php get_template_part('blocks/block','reviews-footer'); ?>
 
 </div><!-- #front-page -->
