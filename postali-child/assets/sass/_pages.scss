@@ -1184,6 +1184,7 @@
                         width: 100%;
                         background-image:url('/wp-content/uploads/2026/06/criminal-defense-separator.jpg');
                         background-size: cover;
+                        position: relative;
 
                         @include respond(phone) {
                             height:200px;
